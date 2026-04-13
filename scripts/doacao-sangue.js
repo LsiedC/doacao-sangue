@@ -61,9 +61,30 @@ document.getElementById("doacao-sangue").addEventListener("submit", function (e)
     return;
   }
 
+  //Cidade//
+  if(cidade.length === ""){
+    alert("Por favor, insira uma cidade.");
+    return;
+  }
+
+  //Estado//
+  if(cidade.length === ""){
+    alert("Por favor, insira um estado.");
+  }
+
+  let novoDoador = {
+      nome: nome,
+      email: email,
+      idade: idade,
+      peso: peso,
+      sangue: tiposanguineo,
+      telefone: telefone,
+      cidade: cidade,
+      estado: estado,
+  };
 
 
 
   document.getElementById("resultado").innerHTML = "Seu cadastro foi realizado com sucesso na nossa ONG !<br>" + "Nome: " + nome;
-  
+
 });
