@@ -55,10 +55,15 @@ document.getElementById("doacao-sangue").addEventListener("submit", function (e)
     return alert("Por favor, selecione um tipo sanguíneo.");
   }
 
-  //
+  //Telefone//
+  if (!/^[0-9]+$/.test(telefone)) {
+    alert("Seu telefone deve conter apenas numero.");
+    return;
+  }
+
 
 
 
   document.getElementById("resultado").innerHTML = "Seu cadastro foi realizado com sucesso na nossa ONG !<br>" + "Nome: " + nome;
-
+  
 });
