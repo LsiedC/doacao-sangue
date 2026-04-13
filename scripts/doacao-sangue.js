@@ -24,7 +24,10 @@ document.getElementById("doacao-sangue").addEventListener("submit", function (e)
   if (!email.includes("@")) return alert("Email inválido: O email deve conter @");
 
   //Idade
-  
+  if(idade > 0 && idade < 16){
+    alert("Você deve ter mais que 16 anos de idade para doar sangue!");
+    return;
+  }
 
 
   document.getElementById("resultado").innerHTML = "Seu cadastro foi realizado com sucesso na nossa ONG !<br>" + "Nome: " + nome;
