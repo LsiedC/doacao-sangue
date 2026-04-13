@@ -89,6 +89,8 @@ document.getElementById("doacao-sangue").addEventListener("submit", function (e)
 
   listaDoadores.push(novoDoador); // vai adicionar os doador ao vetor
 
+  console.log(novoDoador);
+
   document.getElementById("resultado").innerHTML = "Seu cadastro foi realizado com sucesso na nossa ONG !<br>" + "Nome: " + nome;
   document.getElementById("doadores").innerHTML = "Atualmente temos: " + listaDoadores.length + " doadores.";
 });
