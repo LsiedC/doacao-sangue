@@ -1,3 +1,5 @@
+let listaDoadores = [];
+
 document.getElementById("doacao-sangue").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -71,6 +73,8 @@ document.getElementById("doacao-sangue").addEventListener("submit", function (e)
   if(cidade.length === ""){
     alert("Por favor, insira um estado.");
   }
+ 
+  // vetor com as informacoes dos doadores //
 
   let novoDoador = {
       nome: nome,
@@ -83,8 +87,8 @@ document.getElementById("doacao-sangue").addEventListener("submit", function (e)
       estado: estado,
   };
 
-
+  listaDoadores.push(novoDoador); // vai adicionar os doador ao vetor
 
   document.getElementById("resultado").innerHTML = "Seu cadastro foi realizado com sucesso na nossa ONG !<br>" + "Nome: " + nome;
-
+  document.getElementById("doadores").innerHTML = "Atualmente temos: " + listaDoadores.length + " doadores.";
 });
